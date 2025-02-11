@@ -158,7 +158,7 @@ soundfile==0.12.1
 soupsieve==2.4.1
 soxr==0.3.5
 scispacy==0.5.3
-starlette==0.27.0
+starlette==0.40.0
 sympy==1.12
 tensorboard==2.13.0
 tensorboard_plugin_profile==2.17.0
