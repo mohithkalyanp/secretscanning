@@ -1,0 +1,24 @@
+name: ManualDependencyReview
+
+on:
+  workflow_dispatch:  # Allows manual execution anytime
+  push:
+    branches:
+      - manual-check  # Runs on pushes to your test branch
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v4
+
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v4
+        with:
+          base-ref: main  # Compare against the main branch
+          head-ref: manual-check  # Compare current branch
+          fail-on-severity: low  # Options: low, moderate, high, critical
