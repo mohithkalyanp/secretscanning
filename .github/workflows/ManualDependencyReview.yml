@@ -20,5 +20,5 @@ jobs:
         uses: actions/dependency-review-action@v4
         with:
           base-ref: main  # Compare against the main branch
-          head-ref: ${{ github.ref_name }}  # Compare current branch
+          head-ref: manual-check  # Compare current branch
           fail-on-severity: low  # Options: low, moderate, high, critical
