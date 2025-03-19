@@ -18,4 +18,5 @@ const getLaunchDarklySdkId = userId => {
   }
   hmac.update(userId)
   return hmac.digest('hex')
+  
 }t
